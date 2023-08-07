@@ -11,7 +11,7 @@ export default async function run(cwd: string) {
     const tag =
       tool !== "root"
         ? `${pkg.packageJson.name}@${pkg.packageJson.version}`
-        : `v${pkg.packageJson.version}`;
+        : `${pkg.packageJson.version}`;
 
     if (allExistingTags.has(tag)) {
       log("Skipping tag (already exists): ", tag);
